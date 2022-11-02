@@ -1,0 +1,58 @@
+/* Container */
+.container {
+  width: 90%;
+  margin: auto;
+
+  @media (min-width: 640px) {
+    width: 85%;
+  }
+}
+
+/* Mobile Nav */
+.mb-nav-links-active,
+.mb-nav-links-inactive {
+  position: fixed;
+
+  padding-top: 3.5rem /* 56px */;
+  padding-bottom: 3.5rem /* 56px */;
+  padding-left: 1.5rem /* 24px */;
+  padding-right: 1.5rem /* 24px */;
+
+  background-color: rgb(134, 134, 206);
+  background-blend-mode: darken;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 30%;
+  z-index: 50;
+}
+.mb-nav-links-active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.mb-nav-links-inactive {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(50%);
+  transition: all 1s;
+}
+
+.mb-nav-links.active {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Small to Large Nav */
+.sm-nav-links {
+  display: flex;
+  gap: 1rem;
+}
