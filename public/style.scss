@@ -36,17 +36,11 @@
   transition: all 0.5s ease-in-out;
 }
 
-.mb-nav-links-active {
-  /*  visibility: visible;
-
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0);
-  transition: all 0.5s ease-in-out; */
+.hide-section {
+  opacity: 0;
+  transition: all 2s;
 }
 
-/* Small to Large Nav */
-.sm-nav-links {
-  display: flex;
-  gap: 1rem;
+.show-section {
+  opacity: 1;
 }
