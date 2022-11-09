@@ -18,6 +18,14 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
     <script defer src="./app.js"></script>
     <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="style.css" />
@@ -99,22 +107,30 @@
             :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
             class="absolute inset-x-0 top-full z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white sm:mt-0 sm:p-0 sm:top-0 sm:relative sm:bg-transparent sm:w-auto sm:opacity-100 sm:translate-x-0 sm:flex sm:items-center"
           >
-            <div class="flex flex-col sm:flex-row sm:space-x-6 md:space-x-10">
+            <div
+              class="flex flex-col sm:items-center sm:flex-row sm:space-x-6 md:space-x-10"
+            >
               <a
                 class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
-                href="#"
+                href="#features"
                 >Features</a
               >
               <a
                 class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
-                href="#"
+                href="#about"
                 >About</a
               >
               <a
                 class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
-                href="#"
+                href="#contact"
                 >Contact</a
               >
+              <button
+                data-coming-soon
+                class="px-8 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
+              >
+                Coming soon
+              </button>
             </div>
           </div>
         </div>
@@ -124,21 +140,6 @@
       <div class="hide-section flex flex-col container py-20">
         <h1
           class="hidden text-5xl font-extrabold text-center lg:text-7xl 2xl:text-8xl"
-        >
-          <span
-            class="text-transparent bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 dark:from-teal-200 dark:via-indigo-300 dark:to-sky-500"
-          >
-            Coming
-          </span>
-
-          <span
-            class="text-transparent bg-gradient-to-tr bg-clip-text from-blue-500 via-pink-500 to-red-500 dark:from-sky-300 dark:via-pink-300 dark:to-red-500"
-          >
-            Soon
-          </span>
-        </h1>
-        <h1
-          class="text-5xl font-extrabold text-center lg:text-7xl 2xl:text-8xl"
         >
           <span
             class="text-transparent bg-gradient-to-br bg-clip-text dark:from-gray-900 dark:via-blue-500 dark:to-blue-900"
@@ -152,17 +153,20 @@
             Soon
           </span>
         </h1>
+        <h1 class="text-5xl font-bold text-center">HealthA</h1>
 
         <p
           class="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 md:text-xl"
         >
-          Secure Health Matters
+          A smartphone-based application software that acts as a platform to
+          connect in need patients with relevant qualified HPCs.
         </p>
 
         <div
           class="flex flex-col mt-8 space-y-3 sm:-mx-2 sm:flex-row sm:justify-center sm:space-y-0"
         >
           <input
+            data-email-input
             id="email"
             type="text"
             class="px-4 py-3 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring sm:mx-2"
@@ -183,68 +187,20 @@
     </header>
 
     <main id="more-about-healtha">
-      <section class="hidden items-center flex-1">
-        <div class="hide-section flex flex-col container py-20">
-          <h1
-            role="heading"
-            class="text-5xl font-extrabold text-center lg:text-7xl 2xl:text-8xl"
-          >
-            <span
-              class="text-transparent bg-gradient-to-br bg-clip-text from-teal-500 via-indigo-500 to-sky-500 dark:from-teal-200 dark:via-indigo-300 dark:to-sky-500"
-            >
-              Coming
-            </span>
-
-            <span
-              class="text-transparent bg-gradient-to-tr bg-clip-text from-blue-500 via-pink-500 to-red-500 dark:from-sky-300 dark:via-pink-300 dark:to-red-500"
-            >
-              Soon
-            </span>
-          </h1>
-
-          <p
-            class="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 md:text-xl"
-          >
-            Secure Health Matters
-          </p>
-
-          <div
-            class="flex flex-col mt-8 space-y-3 sm:-mx-2 sm:flex-row sm:justify-center sm:space-y-0"
-          >
-            <input
-              id="email"
-              type="text"
-              class="px-6 py-3 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring sm:mx-2"
-              placeholder="Email Address"
-            />
-
-            <button
-              class="px-8 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-600 focus:bg-blue-600 focus:outline-none sm:mx-2"
-            >
-              Notify Me
-            </button>
-          </div>
-
-          <p class="mt-8 text-center text-gray-700 text-md md:text-xl">
-            Notify me when HealthA is launched :)
-          </p>
-        </div>
-      </section>
       <!-- What is HealthA? -->
       <section class="flex flex-col justify-center items-center">
-        <div class="hide-section container mx-auto py-28 space-y-10">
-          <span
-            class="text-5xl w-full text-center text-gray-800 material-symbols-outlined"
+        <div class="hide-section container mx-auto border py-28 space-y-10">
+          <h2
+            class="text-3xl w-full text-center text-gray-800 material-symbols-outlined"
           >
-            medical_services
-          </span>
+            The problem
+          </h2>
 
-          <p
-            class="sm:w-3/4 md:w-1/2 mx-auto text-lg text-center text-gray-800"
-          >
-            HealthA is a smartphone-based application software (app) that Acts
-            as a platform to connect in need patients with relevant qualified
-            HPCs.
+          <p class="mx-auto text-lg text-center text-gray-800">
+            There's Healthcare active workforce shortage, Increasing levels of
+            unemployment in healthcare due to government post reduction and
+            prohibitively high establishment cost. Mainly affecting young,
+            skilled, trained and qualified healthcare professionals (HPCs)
           </p>
         </div>
       </section>
@@ -286,39 +242,83 @@
         </div>
       </section>
       <!-- Why HealthA -->
-      <section>
-        <div
-          class="hide-section container mx-auto py-28 grid sm:grid-cols-2 items-center gap-10 lg:gap-20"
-        >
-          <div class="">
-            <img
-              class="mx-auto w-full md:w-3/4 lg:w-3/4 h-52 sm:h-full lg:h-96 object-cover object-center"
-              src="../pexels-polina-tankilevitch-5234575.jpg"
-              alt="doctor and patient during home visit"
-            />
+      <section class="h-96 lg:h-screen w-full">
+        <!-- Slider main container -->
+        <div class="swiper h-full">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- slide 01 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div
+                class="relative h-full z-20 flex justify-center items-center"
+              >
+                <p class="text-2xl w-[70vw] text-white text-center">
+                  Provides alternative employment (income generating)
+                  opportunities to healthcare professionals
+                </p>
+              </div>
+              <div class="absolute inset-0">
+                <img
+                  class="object-cover w-full h-full"
+                  src="../pexels-polina-tankilevitch-5234582.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            </div>
+            <!-- slide 02 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div
+                class="relative w-full h-full z-20 flex justify-center items-center"
+              >
+                <p class="w-[70vw] text-2xl text-white text-center">
+                  Patient can request a home visit from a HCP to render a
+                  medical service
+                </p>
+              </div>
+              <div class="absolute inset-0">
+                <img
+                  class="object-cover w-full h-full"
+                  src="../pexels-polina-tankilevitch-5234582.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            </div>
+            <!-- slide 03 -->
+            <div class="swiper-slide flex justify-center items-center">
+              <div
+                class="relative w-full h-full z-20 flex justify-center items-center"
+              >
+                <p class="w-[70vw] text-2xl text-white text-center">
+                  Connect in need patients with relevant qualified HPCs
+                </p>
+              </div>
+              <div class="absolute inset-0">
+                <img
+                  class="object-cover w-full h-full"
+                  src="../pexels-polina-tankilevitch-5234575.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+            </div>
           </div>
+          <!--  If we need pagination 
+          <div class="swiper-pagination"></div>
+          -->
 
-          <div class="space-y-5">
-            <h2 role="heading" class="text-4xl font-bold text-gray-800">
-              Why HealthA?
-            </h2>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
-            <ul
-              --data="{data:[
-                'Healthcare active workforce shortage',
-                'Increasing levels of unemployment in healthcare due to
-                government post reduction and prohibitively high establishment
-                cost',
-                'Patient can request a home-visit from a HCP to render a
-                medical service'
-                ]}"
-              class="list-disc list-inside space-y-2 text-lg text-gray-800"
-            >
-              <template></template>
-            </ul>
-          </div>
+          <!--  If we need scrollbar
+          <div class="swiper-scrollbar"></div>
+          -->
         </div>
       </section>
+
       <!-- About -->
       <section class="bg-gray-900 text-gray-200">
         <div
@@ -389,6 +389,7 @@
           </div>
         </div>
       </section>
+
       <!-- Contact -->
       <section>
         <div
@@ -460,16 +461,38 @@
                 url: '#',
               },
             ]}"
-            class="mt-4 -mx-4 md:mt-0"
+            class="mt-4 -mx-4 md:mt-0 flex gap-4"
           >
-            <template x-for="item in socials">
-              <a
-                x-text="item.name"
-                :href="item.url"
-                class="px-4 text-gray-700 transition-colors duration-300 hover:text-blue-600"
-              >
-              </a>
-            </template>
+            <a
+              href="#"
+              class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
+            >
+              <img
+                class="w-6 aspect-square"
+                src="./images/facebook-1.png"
+                alt=""
+              />
+            </a>
+            <a
+              href="#"
+              class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
+            >
+              <img
+                class="w-6 aspect-square"
+                src="./images/instagram.png"
+                alt=""
+              />
+            </a>
+            <a
+              href="#"
+              class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
+            >
+              <img
+                class="w-6 aspect-square"
+                src="./images/linkedin.png"
+                alt=""
+              />
+            </a>
           </div>
         </div>
       </footer>
