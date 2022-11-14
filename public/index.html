@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -25,7 +25,9 @@
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-    ></script>
+    ></script> -->
+    <link rel="stylesheet" href="./swiper.min.css" />
+    <script defer src="./swiper-bundle.min.js"></script>
     <script defer src="./app.js"></script>
     <link rel="stylesheet" href="tailwind.css" />
     <link rel="stylesheet" href="style.css" />
@@ -39,7 +41,7 @@
       Go to content
     </a>
     <header>
-      <nav x-data="{ isOpen: false }" class="relative bg-white shadow">
+      <nav class="relative bg-white">
         <div
           class="container py-2 sm:py-2 mx-auto sm:flex sm:justify-between sm:items-center"
         >
@@ -51,7 +53,7 @@
               >
                 <img
                   class="block w-16 object-top object-cover aspect-square rounded-full"
-                  src="../logo-not-transparent.jpg"
+                  src="./images/logo-not-transparent.jpg"
                   alt=""
                 />
               </a>
@@ -60,20 +62,18 @@
             <!-- Mobile menu button -->
             <div class="flex sm:hidden">
               <button
-                x-cloak
-                @click="isOpen = !isOpen"
+                data-nav-button
                 type="button"
                 class="text-gray-900 hover:text-black focus:outline-none focus:text-black"
                 aria-label="toggle menu"
               >
                 <svg
-                  x-show="!isOpen"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="2"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="hamburger w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -83,9 +83,8 @@
                 </svg>
 
                 <svg
-                  x-show="isOpen"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6"
+                  class="cross hidden w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -102,11 +101,7 @@
           </div>
 
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-          <div
-            x-cloak
-            :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-            class="absolute inset-x-0 top-full z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white sm:mt-0 sm:p-0 sm:top-0 sm:relative sm:bg-transparent sm:w-auto sm:opacity-100 sm:translate-x-0 sm:flex sm:items-center"
-          >
+          <div data-nav-links class="mobile-nav-links">
             <div
               class="flex flex-col sm:items-center sm:flex-row sm:space-x-6 md:space-x-10"
             >
@@ -126,8 +121,8 @@
                 >Contact</a
               >
               <button
-                data-coming-soon
-                class="px-8 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-md hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
+                data-coming-button
+                class="px-8 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
               >
                 Coming soon
               </button>
@@ -137,17 +132,62 @@
       </nav>
 
       <!-- Hero section -->
-      <div class="hide-section flex flex-col container py-20">
-        <h1 role="heading" class="text-5xl font-bold text-blue-700 text-center">
-          HealthA
+      <div class="hidden hide-section flex-col container py-20">
+        <h1
+          class="hidden text-5xl font-extrabold text-center lg:text-7xl 2xl:text-8xl"
+        >
+          <span
+            class="text-transparent bg-gradient-to-br bg-clip-text dark:from-gray-900 dark:via-blue-500 dark:to-blue-900"
+          >
+            Coming
+          </span>
+
+          <span
+            class="text-transparent bg-gradient-to-tr bg-clip-text from-blue-900 via-blue-500 to-red-900"
+          >
+            Soon
+          </span>
         </h1>
+        <h1 class="text-5xl font-bold text-center">HealthA</h1>
 
         <p
-          class="max-w-3xl md:w-3/4 lg:w-1/2 mx-auto mt-6 text-base text-center text-gray-800"
+          class="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 md:text-xl"
         >
           A smartphone-based application software that acts as a platform to
-          connect in need patients with relevant qualified HPCs. <br />Leave
-          your email to get notified when we launch.
+          connect in need patients with relevant qualified HPCs.
+        </p>
+
+        <div
+          class="flex flex-col mt-8 space-y-3 sm:-mx-2 sm:flex-row sm:justify-center sm:space-y-0"
+        >
+          <input
+            data-emaisl-input
+            id="email"
+            type="text"
+            class="px-4 py-3 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring sm:mx-2"
+            placeholder="Email Address"
+          />
+
+          <button
+            class="px-8 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
+          >
+            Notify Me
+          </button>
+        </div>
+
+        <p class="mt-8 text-center text-gray-700 text-md md:text-xl">
+          Notify me when HealthA is launched :)
+        </p>
+      </div>
+      <!-- Hero section -->
+      <div class="hide-section flex flex-col container py-20">
+        <h1 class="text-5xl font-bold text-center text-gray-900">HealthA</h1>
+
+        <p
+          class="max-w-3xl mx-auto mt-6 text-lg text-center text-gray-700 md:text-xl"
+        >
+          A smartphone-based application software that acts as a platform to
+          connect in need patients with relevant qualified HPCs.
         </p>
 
         <form
@@ -160,13 +200,13 @@
           novalidate
         >
           <div id="mc_embed_signup_scroll">
-            <div class="flex flex-col sm:flex-row gap-2">
+            <div class="mc-field-group">
               <input
                 data-email-input
                 type="email"
                 value=""
                 name="EMAIL"
-                class="required email px-4 py-3 text-sm text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring sm:mx-2"
+                class="required email w-full mb-2 px-4 py-3 text-gray-700 bg-white border rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring sm:mx-2"
                 placeholder="Email Address"
                 id="mce-EMAIL"
                 required
@@ -177,13 +217,10 @@
                 value="Notify Me"
                 name="subscribe"
                 id="mc-embedded-subscribe"
-                class="px-8 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform border border-blue-600 bg-blue-600 rounded-md hover:border-blue-700 focus:border-blue-700 hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
+                class="w-full px-8 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
               />
             </div>
-            <span
-              id="mce-EMAIL-HELPERTEXT"
-              class="helper_text w-full block text-center mt-2"
-            ></span>
+            <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
             <div id="mce-responses" class="clear foot">
               <div
                 class="response"
@@ -191,7 +228,7 @@
                 style="display: none"
               ></div>
               <div
-                class="response text-center"
+                class="response"
                 id="mce-success-response"
                 style="display: none"
               ></div>
@@ -208,13 +245,11 @@
           </div>
         </form>
 
-        <p class="mt-6 text-center text-gray-700 text-md md:text-lg">
+        <p class="mt-8 text-center text-gray-700 text-md md:text-xl">
           Notify me when HealthA is launched :)
         </p>
       </div>
-
       <!-- Begin Mailchimp Signup Form -->
-
       <div id="mc_embed_signup"></div>
       <!--End mc_embed_signup-->
     </header>
@@ -222,7 +257,7 @@
     <main id="more-about-healtha">
       <!-- What is HealthA? -->
       <section class="hidden flex-col justify-center items-center">
-        <div class="hide-section container mx-auto border py-28 space-y-10">
+        <div class="hide-section container mx-auto py-28 space-y-10">
           <h2
             class="text-3xl w-full text-center text-gray-800 material-symbols-outlined"
           >
@@ -251,7 +286,7 @@
           <div class="space-y-10">
             <article class="flex flex-col justify-center gap-4">
               <header class="space-y-2">
-                <h3 role="heading" class="text-2xl font-medium">
+                <h3 class="text-2xl font-medium">
                   The return of "home visits"
                 </h3>
               </header>
@@ -274,8 +309,9 @@
           </div>
         </div>
       </section>
+
       <!-- Why HealthA -->
-      <section class="h-96 sm:h-[70vh] lg:h-screen w-full">
+      <section class="h-96 md:h-[45vh] lg:h-screen w-full">
         <!-- Slider main container -->
         <div class="swiper h-full">
           <!-- Additional required wrapper -->
@@ -284,17 +320,17 @@
             <!-- slide 01 -->
             <div class="swiper-slide flex justify-center items-center">
               <div
-                class="relative h-full z-20 flex justify-center items-center"
+                class="relative container h-full z-30 flex justify-center items-center"
               >
-                <p class="text-2xl w-[70vw] text-white text-center">
-                  Provides alternative employment (income generating)
-                  opportunities to healthcare professionals
+                <p class="text-2xl sm:w-[70vw] text-white">
+                  Provides alternative employment opportunities to healthcare
+                  professionals.
                 </p>
               </div>
               <div class="absolute inset-0">
                 <img
                   class="object-cover w-full h-full"
-                  src="../pexels-polina-tankilevitch-5234582.jpg"
+                  src="./images/pexels-polina-tankilevitch-5234582.jpg"
                   alt=""
                 />
               </div>
@@ -303,17 +339,17 @@
             <!-- slide 02 -->
             <div class="swiper-slide flex justify-center items-center">
               <div
-                class="relative w-full h-full z-20 flex justify-center items-center"
+                class="relative container h-full z-30 flex justify-center items-center"
               >
-                <p class="w-[70vw] text-2xl text-white text-center">
+                <p class="text-2xl text-white text-center">
                   Patient can request a home visit from a HCP to render a
-                  medical service
+                  medical service.
                 </p>
               </div>
               <div class="absolute inset-0">
                 <img
                   class="object-cover w-full h-full"
-                  src="../pexels-polina-tankilevitch-5234582.jpg"
+                  src="./images/pexels-polina-tankilevitch-5234582.jpg"
                   alt=""
                 />
               </div>
@@ -322,33 +358,28 @@
             <!-- slide 03 -->
             <div class="swiper-slide flex justify-center items-center">
               <div
-                class="relative w-full h-full z-20 flex justify-center items-center"
+                class="relative container h-full z-30 flex justify-center items-center"
               >
-                <p class="w-[70vw] text-2xl text-white text-center">
-                  Connect in need patients with relevant qualified HPCs
+                <p class="text-2xl text-white text-right">
+                  Connect in need patients with relevant qualified HPCs.
                 </p>
               </div>
               <div class="absolute inset-0">
                 <img
                   class="object-cover w-full h-full"
-                  src="../pexels-polina-tankilevitch-5234575.jpg"
+                  src="./images/pexels-polina-tankilevitch-5234575.jpg"
                   alt=""
                 />
               </div>
               <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
             </div>
           </div>
-          <!--  If we need pagination 
+          <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
-          -->
 
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
-          <!--  If we need scrollbar
-          <div class="swiper-scrollbar"></div>
-          -->
         </div>
       </section>
 
@@ -359,10 +390,10 @@
           class="hide-section container mx-auto text-gray-200 py-28 space-y-10"
         >
           <header class="space-y-5">
-            <h2 role="heading" class="text-4xl font-bold text-center">
-              Meet our team
+            <h2 role="heading" class="text-4xl font-bold sm:text-center">
+              Heading
             </h2>
-            <p class="sm:w-3/4 lg:w-2/3 mx-auto text-center">
+            <p class="sm:w-3/4 lg:w-2/3 mx-auto sm:text-center">
               We are a team of passionate entrepreneurs, scientists, clinicians
               and dreamers working to make the world a better place by creating
               the technology that gives the world access to quality healthcare.
@@ -370,55 +401,80 @@
           </header>
 
           <div
-            x-data="{data: [
-            {
-              names: 'Dr. Tessa Johnson, M.D.',
-              title: 'GYNECOLOGIST',
-              bio: ' With over a decade of experience, Dr. Johnshon is the resident expert on general gynecology and women\'s health.',
-              photo: 'https://healtha.my.canva.site/images/e86778c5e6a4d7cd39a051e85715f6ae.jpg'
-            },
-            {
-              names: 'Dr. Corey Johns, M.D.',
-              title: 'GYNECOLOGIST & OBSTETRICIAN',
-              bio: 'As the senior doctor in East Forge, Dr. Johns specializes in gynecologic surgery and obstetric care.',
-              photo: 'https://healtha.my.canva.site/images/e86778c5e6a4d7cd39a051e85715f6ae.jpg'  
-            },
-            {
-              names: 'Dr. Laura Chan, M.D.',
-              title: 'GYNECOLOGIST & OBSTETRICIAN',
-              bio: 'Dr. Chan has over 15 years of experience as a fertility expert and obstetrician.',
-              photo: 'https://healtha.my.canva.site/images/e86778c5e6a4d7cd39a051e85715f6ae.jpg'  
-            }
-            ]}"
-            class="sm:grid-cols-2 space-y-10 sm:space-y-0 sm:gap-10 items-start md:grid-cols-3 sm:grid lg:gap-10"
+            style="
+              --swiper-navigation-color: #fff;
+              --swiper-pagination-color: #fff;
+            "
+            class="swiper mySwiper h-max"
           >
-            <template x-for="item in data">
+            <div class="swiper-wrapper h-96 lg:h-[70vh]">
+              <!-- slide 001 -->
               <article
-                class="relative text-white space-y-4 flex flex-col items-center justify-center"
+                class="swiper-slide relative flex flex-col justify-center"
               >
-                <div class="w-28 rounded-full sm:w-28">
+                <div class="relative z-30 container">
+                  <h3 class="mb-2 text-3xl text-white">
+                    General Practitioners
+                  </h3>
+
+                  <p class="sm:w-1/2 text-base text-white">
+                    Find a General Practitioner on our network who will
+                    diagnose, prescribe or recommend a specialist for you.
+                  </p>
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+                <div class="absolute inset-0 z-10">
                   <img
-                    class="aspect-square rounded-full object-cover"
-                    :src="item.photo"
-                    :alt="item.names"
+                    class="object-cover w-full h-full"
+                    src="./images/pexels-polina-tankilevitch-5234575.jpg"
+                    alt=""
                   />
                 </div>
+              </article>
+              <!-- slide 002 -->
+              <article class="swiper-slide flex flex-col justify-center">
+                <div class="relative z-30 container text-white">
+                  <div class="mb-2 text-3xl text-white">Gynecologists</div>
 
-                <div class="space-y-2 text-white lg:px-6">
-                  <div class="space-y-1">
-                    <h3
-                      x-text="item.names"
-                      class="text-lg text-center font-medium"
-                    ></h3>
-                    <p
-                      x-text="item.title"
-                      class="uppercase text-xs text-center"
-                    ></p>
-                  </div>
-                  <p x-text="item.bio" class="text-base text-center"></p>
+                  <p class="sm:w-1/2 text-base text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam dictum mattis velit, sit amet faucibus felis iaculis
+                    nec. Nulla laoreet justo vitae porttitor porttitor.
+                  </p>
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+                <div class="absolute inset-0 z-10">
+                  <img
+                    class="object-cover w-full h-full"
+                    src="./images/pexels-polina-tankilevitch-5234582.jpg"
+                    alt=""
+                  />
                 </div>
               </article>
-            </template>
+              <!-- slide 003 -->
+              <article class="swiper-slide flex flex-col justify-center">
+                <div class="relative z-30 text-white container">
+                  <div class="mb-2 text-2xl font-medium text-white">Nurses</div>
+
+                  <p class="sm:w-1/2 text-base text-white">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquam dictum mattis velit, sit amet faucibus felis iaculis
+                    nec. Nulla laoreet justo vitae porttitor porttitor.
+                  </p>
+                </div>
+                <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+                <div class="absolute inset-0 z-10">
+                  <img
+                    class="object-cover w-full h-full"
+                    src="./images/pexels-polina-tankilevitch-5234575.jpg"
+                    alt=""
+                  />
+                </div>
+              </article>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -430,13 +486,15 @@
           class="hide-section container mx-auto py-28 space-y-10"
         >
           <header class="space-y-2 flex flex-col items-center">
-            <h2 role="heading" class="text-3xl font-bold text-gray-700">
+            <h2 role="heading" class="text-3xl font-bold text-gray-900">
               Get in touch
             </h2>
-            <p class="text-lg">We will get back to you as soon as possible.</p>
+            <p class="text-lg text-center">
+              We will get back to you as soon as possible.
+            </p>
           </header>
 
-          <div class="grid items-center justify-center sm:grid-cols-2 gap-6">
+          <div class="grid items-center justify-center sm:grid-cols-2">
             <article class="justify-self-center">
               <h3 class="text-lg font-medium text-center">Email Address</h3>
               <a class="text-lg" href="mailto:support@healtha.co.za"
@@ -450,14 +508,15 @@
           </div>
         </div>
       </section>
+
       <!-- footer -->
-      <footer>
+      <footer class="bg-gray-900 text-white">
         <div
           class="container py-10 flex flex-col items-center mt-12 sm:flex-row sm:justify-between"
         >
           <a
             href="privacy.html"
-            class="text-gray-700 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+            class="underline text-gray-400 sm:text-gray-700 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
           >
             Privacy Policy
           </a>
@@ -468,7 +527,7 @@
               class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
             >
               <img
-                class="w-6 aspect-square"
+                class="w-8 aspect-square"
                 src="./images/facebook-1.png"
                 alt=""
               />
@@ -478,7 +537,7 @@
               class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
             >
               <img
-                class="w-6 aspect-square"
+                class="w-8 aspect-square"
                 src="./images/instagram.png"
                 alt=""
               />
@@ -488,7 +547,7 @@
               class="text-gray-700 transition-colors duration-300 hover:text-blue-600"
             >
               <img
-                class="w-6 aspect-square"
+                class="w-8 aspect-square"
                 src="./images/linkedin.png"
                 alt=""
               />

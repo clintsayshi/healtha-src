@@ -14,6 +14,51 @@ html {
   }
 }
 
+/* Mobile Nav */
+.mobile-nav-links {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background: white;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 50;
+}
+
+@media (min-width: 640px) {
+  .mobile-nav-links {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: transparent;
+    padding: 0;
+    pointer-events: all;
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.mobile-nav-links.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  pointer-events: all;
+  opacity: 1;
+}
+
 /* hide and show on scroll */
 .hide-section {
   opacity: 0;
