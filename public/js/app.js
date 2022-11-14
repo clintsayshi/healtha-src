@@ -42,7 +42,7 @@ const hiddenElements = document.querySelectorAll(".hide-section");
 hiddenElements.forEach((element) => mainobserver.observe(element));
 
 /* Slider:Why HealthA */
-const swiper001 = new Swiper(".swiper001", {
+const swiper_one = new Swiper(".swiper-one", {
   // parameters
   direction: "horizontal",
   loop: true,
@@ -58,7 +58,7 @@ const swiper001 = new Swiper(".swiper001", {
 });
 
 /* Slider:About us */
-var swiper002 = new Swiper(".mySwiper002", {
+var swiper_two = new Swiper(".swiper-two", {
   // parameters
   speed: 2500,
   direction: "horizontal",
