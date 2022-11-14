@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -14,23 +14,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-    ></script> -->
-    <link rel="stylesheet" href="./swiper.min.css" />
-    <script defer src="./swiper-bundle.min.js"></script>
-    <script defer src="./app.js"></script>
-    <link rel="stylesheet" href="tailwind.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <script defer src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/app.js"></script>
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>HealthA</title>
   </head>
   <body>
@@ -53,7 +41,7 @@
               >
                 <img
                   class="block w-16 object-top object-cover aspect-square rounded-full"
-                  src="./images/logo-not-transparent.jpg"
+                  src="./images/healtha-logo.png"
                   alt=""
                 />
               </a>
@@ -245,7 +233,7 @@
           </div>
         </form>
 
-        <p class="mt-8 text-center text-gray-700 text-md md:text-xl">
+        <p class="mt-8 text-center text-gray-700 text-md md:text-base">
           Notify me when HealthA is launched :)
         </p>
       </div>
@@ -313,7 +301,7 @@
       <!-- Why HealthA -->
       <section class="h-96 md:h-[45vh] lg:h-screen w-full">
         <!-- Slider main container -->
-        <div class="swiper h-full">
+        <div class="swiper001 h-full">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
@@ -405,7 +393,7 @@
               --swiper-navigation-color: #fff;
               --swiper-pagination-color: #fff;
             "
-            class="swiper mySwiper h-max"
+            class="swiper002 h-max"
           >
             <div class="swiper-wrapper h-96 lg:h-[70vh]">
               <!-- slide 001 -->
@@ -494,7 +482,7 @@
             </p>
           </header>
 
-          <div class="grid items-center justify-center sm:grid-cols-2">
+          <div class="grid items-center justify-center sm:grid-cols-2 gap-4">
             <article class="justify-self-center">
               <h3 class="text-lg font-medium text-center">Email Address</h3>
               <a class="text-lg" href="mailto:support@healtha.co.za"

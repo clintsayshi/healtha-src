@@ -30,7 +30,6 @@ comingSoonBtn.addEventListener("click", () => {
 /* Transitions on scroll */
 const mainobserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    //console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.add("show-section");
     } else {
@@ -43,15 +42,15 @@ const hiddenElements = document.querySelectorAll(".hide-section");
 hiddenElements.forEach((element) => mainobserver.observe(element));
 
 /* Slider:Why HealthA */
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
+const swiper001 = new Swiper(".swiper001", {
+  // parameters
   direction: "horizontal",
   loop: true,
   autoplay: true,
   slidesPerView: 1,
   slidesOffsetAfter: 0,
 
-  // Navigation arrows
+  // navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -59,8 +58,8 @@ const swiper = new Swiper(".swiper", {
 });
 
 /* Slider:About us */
-var myswiper = new Swiper(".mySwiper", {
-  // Optional parameters
+var swiper002 = new Swiper(".mySwiper002", {
+  // parameters
   speed: 2500,
   direction: "horizontal",
   loop: true,
@@ -72,7 +71,7 @@ var myswiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   slidesOffsetAfter: 0,
 
-  // If we need pagination
+  // pagination
   pagination: {
     el: ".swiper-pagination",
   },

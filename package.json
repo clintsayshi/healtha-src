@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tailwindcss build -i ./src/tailwind.css -o ./public/tailwind.css",
     "build": "NODE_ENV=production npm run dev",
-    "watch-css": "tailwindcss build -i ./src/tailwind.css -o ./public/tailwind.css --watch",
+    "watch-css": "tailwindcss build -i ./src/tailwind.css -o ./public/css/tailwind.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

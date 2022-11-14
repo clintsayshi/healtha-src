@@ -588,16 +588,16 @@ video {
   z-index: 99;
 }
 
-.z-20 {
-  z-index: 20;
+.z-30 {
+  z-index: 30;
 }
 
 .z-10 {
   z-index: 10;
 }
 
-.z-30 {
-  z-index: 30;
+.z-20 {
+  z-index: 20;
 }
 
 .m-1 {
@@ -733,10 +733,6 @@ video {
   width: 100%;
 }
 
-.w-\[70vw\] {
-  width: 70vw;
-}
-
 .w-8 {
   width: 2rem;
 }
@@ -804,10 +800,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
 }
 
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
@@ -1107,14 +1099,14 @@ video {
   line-height: 2rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1536,20 +1528,20 @@ video {
     display: none;
   }
 
-  .sm\:w-3\/4 {
-    width: 75%;
+  .sm\:w-\[70vw\] {
+    width: 70vw;
   }
 
-  .sm\:w-auto {
-    width: auto;
+  .sm\:w-3\/4 {
+    width: 75%;
   }
 
   .sm\:w-1\/2 {
     width: 50%;
   }
 
-  .sm\:w-\[70vw\] {
-    width: 70vw;
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:translate-x-0 {
@@ -1710,6 +1702,11 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .md\:opacity-100 {
