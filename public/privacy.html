@@ -4,19 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="expected-hostname" content="healtha.co.za" />
+    <meta
+      name="description"
+      content="A smartphone-based application software that acts as a platform to connect in need patients with relevant qualified HPCs."
+    />
+
+    <meta property="og:site_name" content="HealthA" />
+    <meta property="og:locale" content="za" />
+    <meta property="og:url" content="https://healtha.co.za/" />
+    <meta property="og:title" content="HealthA" />
+    <meta
+      property="og:description"
+      content="A smartphone-based application software that acts as a platform to connect in need patients with relevant qualified HPCs."
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://www.healtha.co.za" />
+    <meta name="twitter:title" content="healtha" />
+    <meta
+      name="twitter:description"
+      content="A smartphone-based application software that acts as a platform to connect in need patients with relevant qualified HPCs. Join our waiting list to be first to get our app."
+    />
+
+    <meta name="twitter:site" content="https://healtha.co.za" />
+    <!-- <meta name="twitter:creator" content="@HealthA" /> -->
+    <meta
+      name="twitter:description"
+      content="A smartphone-based application software that acts as a platform to connect in need patients with relevant qualified HPCs."
+    />
+
+    <meta name="twitter:title" content="HealthA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="./images/android-chrome-512x512.png" />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="./images/apple-touch-icon.png"
+    />
+
+    <link rel="icon" type="image/ico" href="./images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="tailwind.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script
-      defer
-      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
-    ></script>
-    <script defer src="./app.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./css/swiper.min.css" />
+    <script defer src="./js/swiper-bundle.min.js"></script>
+    <script defer src="./js/app.js"></script>
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Privacy Policy - HealthA</title>
   </head>
   <body>
@@ -27,19 +72,19 @@
       Go to content
     </a>
     <header>
-      <nav x-data="{ isOpen: false }" class="relative bg-white shadow">
+      <nav class="relative bg-white">
         <div
           class="container py-2 sm:py-2 mx-auto sm:flex sm:justify-between sm:items-center"
         >
           <div class="flex items-center justify-between">
             <div class="h-max">
               <a
-                class="text2xl block font-bold rounded-full text-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                href="index.html"
+                class="block font-bold rounded-full text-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+                href="#"
               >
                 <img
-                  class="block w-16 object-top object-cover aspect-square rounded-full"
-                  src="../logo-not-transparent.jpg"
+                  class="block w-16 sm:w-28 object-top object-cover aspect-square rounded-full"
+                  src="./images/healtha-logo.png"
                   alt=""
                 />
               </a>
@@ -48,20 +93,18 @@
             <!-- Mobile menu button -->
             <div class="flex sm:hidden">
               <button
-                x-cloak
-                @click="isOpen = !isOpen"
+                data-nav-button
                 type="button"
                 class="text-gray-900 hover:text-black focus:outline-none focus:text-black"
                 aria-label="toggle menu"
               >
                 <svg
-                  x-show="!isOpen"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="2"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="hamburger w-6 h-6"
                 >
                   <path
                     stroke-linecap="round"
@@ -71,9 +114,8 @@
                 </svg>
 
                 <svg
-                  x-show="isOpen"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="w-6 h-6"
+                  class="cross hidden w-6 h-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -90,33 +132,37 @@
           </div>
 
           <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-          <div
-            x-cloak
-            :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-            class="absolute inset-x-0 top-full z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white sm:mt-0 sm:p-0 sm:top-0 sm:relative sm:bg-transparent sm:w-auto sm:opacity-100 sm:translate-x-0 sm:flex sm:items-center"
-          >
-            <div class="flex flex-col sm:flex-row sm:space-x-6 md:space-x-10">
+          <div data-nav-links class="mobile-nav-links">
+            <div
+              class="flex flex-col sm:items-center sm:flex-row sm:space-x-6 md:space-x-10"
+            >
               <a
                 class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
-                href="#"
+                href="#features"
                 >Features</a
               >
               <a
                 class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
-                href="#"
+                href="#about"
                 >About</a
               >
               <a
                 class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
-                href="#"
+                href="#contact"
                 >Contact</a
               >
+              <button
+                data-coming-button
+                class="px-8 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
+              >
+                Coming soon
+              </button>
             </div>
           </div>
         </div>
       </nav>
     </header>
-    <main class="privacy-content my-5">
+    <main id="more-about-healtha" class="privacy-content my-5">
       <section class="container py-5">
         <h1>Privacy Policy for Examplr</h1>
 
