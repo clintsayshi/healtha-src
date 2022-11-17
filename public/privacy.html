@@ -80,11 +80,11 @@
             <div class="h-max">
               <a
                 class="block font-bold rounded-full text-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                href="#"
+                href="https://healtha.co.za"
               >
                 <img
-                  class="block w-16 sm:w-28 object-top object-cover aspect-square rounded-full"
-                  src="./images/healtha-logo.png"
+                  class="block w-16 sm:w-24 object-top object-cover aspect-square rounded-full"
+                  src="./images/android-chrome-512x512.png"
                   alt=""
                 />
               </a>
@@ -162,7 +162,7 @@
         </div>
       </nav>
     </header>
-    <main id="more-about-healtha" class="privacy-content my-5">
+    <main id="more-about-healtha" class="privacy-content">
       <section class="container py-5">
         <h1>Privacy Policy for HealthA</h1>
 
@@ -368,42 +368,39 @@
       </section>
 
       <!-- footer -->
-      <footer>
+      <footer class="bg-gray-900">
         <div
           class="container py-10 flex flex-col items-center mt-12 sm:flex-row sm:justify-between"
         >
           <a
-            href="#"
-            class="text-gray-700 transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400"
+            href="privacy.html"
+            class="hover:underline text-gray-400 transition-colors duration-300 hover:text-gray-100"
           >
             Privacy Policy
           </a>
 
-          <div
-            x-data="{socials: [
-              {
-                name: 'Facebook',
-                url: '#',
-              },
-              {
-                name: 'Instagram',
-                url: '#',
-              },
-              {
-                name: 'LinkedIn',
-                url: '#',
-              },
-            ]}"
-            class="mt-4 -mx-4 md:mt-0"
-          >
-            <template x-for="item in socials">
-              <a
-                x-text="item.name"
-                :href="item.url"
-                class="px-4 text-gray-700 transition-colors duration-300 hover:text-blue-600"
-              >
-              </a>
-            </template>
+          <div class="mt-4 -mx-4 md:mt-0 flex gap-4">
+            <a href="#" class="text-gray-700 transition-colors duration-300">
+              <img
+                class="w-8 aspect-square"
+                src="./images/facebook-1.png"
+                alt=""
+              />
+            </a>
+            <a href="#" class="text-gray-700 transition-colors duration-300">
+              <img
+                class="w-8 aspect-square"
+                src="./images/instagram.png"
+                alt=""
+              />
+            </a>
+            <a href="#" class="text-gray-700 transition-colors duration-300">
+              <img
+                class="w-8 aspect-square"
+                src="./images/linkedin.png"
+                alt=""
+              />
+            </a>
           </div>
         </div>
       </footer>

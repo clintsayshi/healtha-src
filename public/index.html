@@ -77,17 +77,21 @@
           class="container py-2 sm:py-2 mx-auto sm:flex sm:justify-between sm:items-center"
         >
           <div class="flex items-center justify-between">
-            <div class="h-max">
+            <!-- logo -->
+            <div class="h-max flex items-center gap-4">
               <a
-                class="block font-bold rounded-full text-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
-                href="#"
+                class="font-bold rounded-full text-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+                href="https://healtha.co.za"
               >
                 <img
-                  class="block w-16 sm:w-28 object-top object-cover aspect-square rounded-full"
-                  src="./images/healtha-logo.png"
+                  class="block w-16 sm:w-24 object-top object-cover aspect-square rounded-full"
+                  src="./images/android-chrome-512x512.png"
                   alt=""
                 />
               </a>
+              <span class="hidden sm:inline font-mono"
+                >Secure Health Matters</span
+              >
             </div>
 
             <!-- Mobile menu button -->
@@ -207,6 +211,7 @@
                 />
 
                 <input
+                  aria-label="submit form"
                   type="submit"
                   value="Notify Me"
                   name="subscribe"
