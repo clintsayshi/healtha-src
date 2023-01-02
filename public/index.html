@@ -74,24 +74,21 @@
     <header>
       <nav class="relative bg-white">
         <div
-          class="container py-2 sm:py-2 mx-auto sm:flex sm:justify-between sm:items-center"
+          class="container py-2 mx-auto sm:py-2 sm:flex sm:justify-between sm:items-center"
         >
           <div class="flex items-center justify-between">
             <!-- logo -->
-            <div class="h-max flex items-center gap-4">
+            <div class="h-max">
               <a
-                class="font-bold rounded-full text-gray-800 transition-colors duration-300 transform lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
+                class="font-bold text-gray-800 transition-colors duration-300 transform rounded-full lg:text-3xl hover:text-gray-700 dark:hover:text-gray-300"
                 href="https://healtha.co.za"
               >
                 <img
-                  class="block w-16 sm:w-24 object-top object-cover aspect-square rounded-full"
+                  class="block object-cover object-top w-16 rounded-full sm:w-24 aspect-square"
                   src="./images/android-chrome-512x512.png"
-                  alt=""
+                  alt="HealthA logo"
                 />
               </a>
-              <span class="hidden sm:inline font-mono"
-                >Secure Health Matters</span
-              >
             </div>
 
             <!-- Mobile menu button -->
@@ -99,7 +96,7 @@
               <button
                 data-nav-button
                 type="button"
-                class="text-gray-900 hover:text-black focus:outline-none focus:text-black"
+                class="text-gray-700 hover:text-gray-900 focus:outline-none focus:text-gray-900"
                 aria-label="toggle menu"
               >
                 <svg
@@ -108,7 +105,7 @@
                   viewBox="0 0 24 24"
                   stroke-width="2"
                   stroke="currentColor"
-                  class="hamburger w-6 h-6"
+                  class="w-6 h-6 hamburger"
                 >
                   <path
                     stroke-linecap="round"
@@ -119,7 +116,7 @@
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="cross hidden w-6 h-6"
+                  class="hidden w-6 h-6 cross"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -141,7 +138,7 @@
               class="flex flex-col sm:items-center sm:flex-row sm:space-x-6 md:space-x-10"
             >
               <a
-                class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-700 md:my-0"
+                class="my-2 text-gray-900 transition-colors duration-300 transform hover:text-blue-900 md:my-0"
                 href="#features"
                 >Features</a
               >
@@ -170,41 +167,39 @@
       <section class="relative flex min-h-[80vh] items-center justify-center">
         <div class="absolute inset-0">
           <img
-            class="object-cover h-full w-full"
+            class="object-cover w-full h-full"
             src="./images/pexels-polina-tankilevitch-5234575.jpg"
             alt=""
           />
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div
-          class="relative hide-section container px-4 sm:px-0 flex flex-col py-20"
+          class="container relative flex flex-col px-4 py-20 hide-section sm:px-0"
         >
-          <h1 class="text-center text-5xl font-bold text-gray-100">HealthA</h1>
+          <h1 class="text-5xl font-bold text-center text-gray-100">HealthA</h1>
 
-          <p
-            class="mx-auto mt-6 max-w-3xl text-center text-lg text-gray-100 md:text-xl"
-          >
+          <p class="max-w-3xl mx-auto mt-6 text-base text-center text-gray-100">
             A smartphone-based application software that acts as a platform to
             connect in need patients with relevant qualified HPCs.
           </p>
 
           <form
-            action="https://gmail.us13.list-manage.com/subscribe/post?u=00afcb6b2ca1012e0022064c1&amp;id=71afa3b760&amp;f_id=00de18e2f0"
+            action="https://healtha.us21.list-manage.com/subscribe/post?u=ab0d44a0a3a200715d8993b44&amp;id=56cc093950&amp;f_id=0068c5e1f0"
             method="post"
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
-            class="validate mt-10 flex flex-col sm:mx-2 sm:flex-row sm:justify-center"
+            class="flex flex-col mt-10 validate sm:mx-2 sm:flex-row sm:justify-center"
             target="_blank"
             novalidate
           >
-            <div id="mc_embed_signup_scroll flex flex-col">
+            <div id="mc_embed_signup_scroll flex flex-col mx-auto">
               <div class="mc-field-group">
                 <input
                   data-email-input
                   type="email"
                   value=""
                   name="EMAIL"
-                  class="required email mb-4 w-full rounded-md border bg-white px-4 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 sm:mx-2"
+                  class="w-full px-4 py-3 mb-4 text-gray-700 bg-white border rounded-md required email focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 sm:mx-2"
                   placeholder="Email Address"
                   id="mce-EMAIL"
                   required
@@ -216,12 +211,12 @@
                   value="Notify Me"
                   name="subscribe"
                   id="mc-embedded-subscribe"
-                  class="w-full transform rounded-md border border-blue-600 bg-blue-600 px-4 py-3 text-sm font-medium capitalize text-white ring-blue-600 transition-colors duration-300 hover:border-blue-700 hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
+                  class="w-full px-4 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 border border-blue-600 rounded-md cursor-pointer ring-blue-600 hover:ring-blue-700 hover:border-blue-700 hover:bg-blue-700 focus:bg-blue-700 focus:outline-none sm:mx-2"
                 />
               </div>
               <span
                 id="mce-EMAIL-HELPERTEXT"
-                class="helper_text m-2 block w-full"
+                class="block w-full m-2 helper_text"
               ></span>
               <div id="mce-responses" class="clear foot">
                 <div
@@ -230,7 +225,7 @@
                   style="display: none"
                 ></div>
                 <div
-                  class="response"
+                  class="text-center text-white response"
                   id="mce-success-response"
                   style="display: none"
                 ></div>
@@ -247,7 +242,7 @@
             </div>
           </form>
 
-          <p class="text-md mt-8 text-center text-gray-100 md:text-base">
+          <p class="mt-8 text-center text-gray-100 text-md md:text-base">
             Notify me when HealthA is launched :)
           </p>
         </div>
@@ -265,13 +260,13 @@
       >
         <div
           id="features"
-          class="hide-section container mx-auto py-28 grid sm:grid-cols-2 items-start gap-10 md:gap-20"
+          class="container grid items-start gap-10 mx-auto hide-section py-28 sm:grid-cols-2 md:gap-20"
         >
           <header class="space-y-2">
             <h2 role="heading" class="text-4xl font-bold text-gray-200">
               Features
             </h2>
-            <p class="text-gray-200">
+            <p class="text-base text-gray-200">
               For both the patients and medical practitioners
             </p>
           </header>
@@ -282,7 +277,7 @@
                   The return of "home visits"
                 </h3>
               </header>
-              <p class="lg:w-3/4 text-lg text-gray-200">
+              <p class="text-base text-gray-200 lg:w-3/4">
                 HealthA will allow a patient to request a "home visit" from an
                 HCP to render a medical service
               </p>
@@ -293,7 +288,7 @@
                   The return of "home visits"
                 </h3>
               </header>
-              <p class="lg:w-3/4 text-lg text-gray-200">
+              <p class="text-base text-gray-200 lg:w-3/4">
                 HealthA will allow a patient to request a "home visit" from an
                 HCP to render a medical service
               </p>
@@ -305,14 +300,14 @@
       <!-- Why HealthA -->
       <section class="h-96 md:h-[45vh] lg:min-h-[80vh] w-full">
         <!-- Slider main container -->
-        <div class="swiper swiper-one h-full">
+        <div class="h-full swiper swiper-one">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <!-- slide 01 -->
-            <div class="swiper-slide flex justify-center items-center">
+            <div class="flex items-center justify-center swiper-slide">
               <div
-                class="relative container h-full z-30 flex justify-center items-center"
+                class="container relative z-30 flex items-center justify-center h-full"
               >
                 <p class="text-2xl sm:w-[70vw] text-white">
                   Provides alternative employment opportunities to healthcare
@@ -326,14 +321,14 @@
                   alt=""
                 />
               </div>
-              <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+              <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
             </div>
             <!-- slide 02 -->
-            <div class="swiper-slide flex justify-center items-center">
+            <div class="flex items-center justify-center swiper-slide">
               <div
-                class="relative container h-full z-30 flex justify-center items-center"
+                class="container relative z-30 flex items-center justify-center h-full"
               >
-                <p class="text-2xl text-white text-center">
+                <p class="text-2xl text-center text-white">
                   Patient can request a home visit from a HCP to render a
                   medical service.
                 </p>
@@ -345,14 +340,14 @@
                   alt=""
                 />
               </div>
-              <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+              <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
             </div>
             <!-- slide 03 -->
-            <div class="swiper-slide flex justify-center items-center">
+            <div class="flex items-center justify-center swiper-slide">
               <div
-                class="relative container h-full z-30 flex justify-center items-center"
+                class="container relative z-30 flex items-center justify-center h-full"
               >
-                <p class="text-2xl text-white text-right">
+                <p class="text-2xl text-right text-white">
                   Connect in need patients with relevant qualified HPCs.
                 </p>
               </div>
@@ -363,7 +358,7 @@
                   alt=""
                 />
               </div>
-              <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+              <div class="absolute inset-0 z-10 bg-black bg-opacity-50"></div>
             </div>
           </div>
           <!-- If we need pagination -->
@@ -379,13 +374,13 @@
       <section class="min-h-[80vh] bg-gray-900 text-gray-200">
         <div
           id="about"
-          class="hide-section container mx-auto py-20 text-gray-200 space-y-10"
+          class="container py-20 mx-auto space-y-10 text-gray-200 hide-section"
         >
           <header class="space-y-5">
             <h2 role="heading" class="text-4xl font-bold sm:text-center">
               Heading
             </h2>
-            <p class="sm:w-3/4 lg:w-2/3 mx-auto sm:text-center">
+            <p class="mx-auto sm:w-3/4 lg:w-2/3 sm:text-center">
               We are a team of passionate entrepreneurs, scientists, clinicians
               and dreamers working to make the world a better place by creating
               the technology that gives the world access to quality healthcare.
@@ -402,19 +397,19 @@
             <div class="swiper-wrapper h-96 lg:h-[70vh]">
               <!-- slide 001 -->
               <article
-                class="swiper-slide relative flex flex-col justify-center"
+                class="relative flex flex-col justify-center swiper-slide"
               >
-                <div class="relative z-30 container">
+                <div class="container relative z-30">
                   <h3 class="mb-2 text-3xl text-white">
                     General Practitioners
                   </h3>
 
-                  <p class="sm:w-1/2 text-base text-white">
+                  <p class="text-base text-white sm:w-1/2">
                     Find a General Practitioner on our network who will
                     diagnose, prescribe or recommend a specialist for you.
                   </p>
                 </div>
-                <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+                <div class="absolute inset-0 z-20 bg-black bg-opacity-50"></div>
                 <div class="absolute inset-0 z-10">
                   <img
                     class="object-cover w-full h-full"
@@ -424,17 +419,17 @@
                 </div>
               </article>
               <!-- slide 002 -->
-              <article class="swiper-slide flex flex-col justify-center">
-                <div class="relative z-30 container text-white">
+              <article class="flex flex-col justify-center swiper-slide">
+                <div class="container relative z-30 text-white">
                   <div class="mb-2 text-3xl text-white">Gynecologists</div>
 
-                  <p class="sm:w-1/2 text-base text-white">
+                  <p class="text-base text-white sm:w-1/2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam dictum mattis velit, sit amet faucibus felis iaculis
                     nec. Nulla laoreet justo vitae porttitor porttitor.
                   </p>
                 </div>
-                <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+                <div class="absolute inset-0 z-20 bg-black bg-opacity-50"></div>
                 <div class="absolute inset-0 z-10">
                   <img
                     class="object-cover w-full h-full"
@@ -444,17 +439,17 @@
                 </div>
               </article>
               <!-- slide 003 -->
-              <article class="swiper-slide flex flex-col justify-center">
-                <div class="relative z-30 text-white container">
+              <article class="flex flex-col justify-center swiper-slide">
+                <div class="container relative z-30 text-white">
                   <div class="mb-2 text-2xl font-medium text-white">Nurses</div>
 
-                  <p class="sm:w-1/2 text-base text-white">
+                  <p class="text-base text-white sm:w-1/2">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Aliquam dictum mattis velit, sit amet faucibus felis iaculis
                     nec. Nulla laoreet justo vitae porttitor porttitor.
                   </p>
                 </div>
-                <div class="absolute inset-0 bg-black bg-opacity-50 z-20"></div>
+                <div class="absolute inset-0 z-20 bg-black bg-opacity-50"></div>
                 <div class="absolute inset-0 z-10">
                   <img
                     class="object-cover w-full h-full"
@@ -473,28 +468,96 @@
       <section class="min-h-[70vh] flex justify-center items-center">
         <div
           id="contact"
-          class="hide-section container mx-auto py-28 space-y-10"
+          class="mx-auto w-full container py-20 space-y-10 hide-section"
         >
-          <header class="space-y-2 flex flex-col items-center">
-            <h2 role="heading" class="text-3xl font-bold text-gray-900">
-              Get in touch
-            </h2>
-            <p class="text-lg text-center">
-              We will get back to you as soon as possible.
+          <header
+            class="relative mb-10 flex flex-col items-center justify-center"
+          >
+            <h2 class="mb-4 text-3xl font-bold text-gray-90">Get in touch</h2>
+
+            <p class="w-full sm:w-2/3 lg:w-2/5 text-base text-center">
+              We are here to help and answer any question you might have. We
+              look forward to hearing from you &#x1F642;
             </p>
           </header>
 
-          <div class="grid items-center justify-center sm:grid-cols-2 gap-4">
-            <article class="justify-self-center">
-              <h3 class="text-lg font-medium text-center">Email Address</h3>
-              <a class="text-lg" href="mailto:support@healtha.co.za"
-                >support@healtha.co.za</a
-              >
-            </article>
-            <article class="justify-self-center">
-              <h3 class="text-lg font-medium text-center">Phone Number</h3>
-              <a class="text-lg" href="tel:+27658900100">+27 65 890 0100</a>
-            </article>
+          <div class="w-full">
+            <!-- contact form -->
+            <form class="w-full sm:w-2/3 lg:w-1/2 mx-auto mb-10 space-y-5">
+              <div class="flex flex-col group">
+                <label
+                  class="mb-2 text-sm text-gray-400 group-focus-within:text-gray-800"
+                  for="name"
+                  >Name</label
+                >
+                <input
+                  id="name"
+                  type="text"
+                  class="w-full px-4 py-3 text-gray-700 bg-white border rounded-md required focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="flex flex-col group">
+                <label
+                  class="mb-2 text-sm text-gray-400 group-focus-within:text-gray-800"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  id="email"
+                  type="email"
+                  class="px-4 py-3 text-gray-700 bg-white border rounded-md required email focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="flex flex-col group">
+                <label
+                  class="mb-2 text-sm text-gray-400 group-focus-within:text-gray-800"
+                  for="message"
+                  >Message</label
+                >
+                <textarea
+                  class="px-4 py-3 text-gray-700 bg-white border rounded-md required email focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300"
+                  id="message"
+                  maxlength="1000"
+                  rows="5"
+                  placeholder="Enter your message"
+                ></textarea>
+              </div>
+
+              <input
+                aria-label="submit form"
+                type="submit"
+                value="Send Message"
+                name="subscribe"
+                id="mc-embedded-subscribe"
+                class="mt-20 w-full px-4 py-3 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 border border-blue-600 rounded-md cursor-pointer ring-blue-600 hover:ring-blue-700 hover:border-blue-700 hover:bg-blue-700 focus:bg-blue-700 focus:outline-none"
+              />
+            </form>
+            <!-- contact details -->
+            <div class="w-full sm:w-2/3 lg:w-1/2 mx-auto">
+              <h3 class="mb-5 text-lg">Contact Details:</h3>
+
+              <div class="flex flex-col sm:flex-row gap-5 justify-between">
+                <article class="">
+                  <h3 class="text-xs text-gray-500">Phone Number</h3>
+                  <a class="text-base font-medium" href="tel:+27658900100"
+                    >+27 65 890 0100</a
+                  >
+                </article>
+
+                <article>
+                  <h3 class="text-xs text-gray-500">Email</h3>
+                  <a
+                    class="text-base font-medium"
+                    href="mailto:support@healtha.co.za"
+                    >support@healtha.co.za</a
+                  >
+                </article>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -502,35 +565,55 @@
       <!-- footer -->
       <footer class="bg-gray-900">
         <div
-          class="container py-10 flex flex-col items-center mt-12 sm:flex-row sm:justify-between"
+          class="container flex flex-col items-center py-10 mt-12 sm:flex-row sm:justify-between"
         >
           <a
             href="privacy.html"
-            class="underline text-gray-400 sm:text-gray-700 transition-colors duration-300 hover:text-gray-10"
+            class="text-gray-400 transition-colors duration-300 hover:underline hover:text-gray-100"
           >
             Privacy Policy
           </a>
 
-          <div class="mt-4 -mx-4 md:mt-0 flex gap-4">
-            <a href="#" class="text-gray-700 transition-colors duration-300">
+          <div class="flex gap-4 mt-4 -mx-4 md:mt-0">
+            <a
+              href="#"
+              class="text-gray-700 transition-colors duration-300"
+              role="button"
+              aria-label="Visit Healtha's Facebook page"
+            >
               <img
-                class="w-8 aspect-square"
+                class="w-8 aspect-square filter black"
                 src="./images/facebook-1.png"
-                alt=""
+                alt="Facebook logo"
+                title="Visit Healtha's Facebook page"
               />
             </a>
-            <a href="#" class="text-gray-700 transition-colors duration-300">
+
+            <a
+              href="#"
+              class="text-gray-700 transition-colors duration-300"
+              role="button"
+              aria-label="Visit Healtha instagram page"
+            >
               <img
                 class="w-8 aspect-square"
                 src="./images/instagram.png"
-                alt=""
+                alt="Instagram logo"
+                title="Visit Healtha instagram page"
               />
             </a>
-            <a href="#" class="text-gray-700 transition-colors duration-300">
+
+            <a
+              href="#"
+              class="text-gray-700 transition-colors duration-300"
+              role="button"
+              aria-label="Visit Healtha linkedin page"
+            >
               <img
                 class="w-8 aspect-square"
                 src="./images/linkedin.png"
-                alt=""
+                alt="Linkedin logo"
+                title="Visit Healtha linkedin page"
               />
             </a>
           </div>
