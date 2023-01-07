@@ -63,16 +63,20 @@ var swiper_two = new Swiper(".swiper-two", {
   speed: 2500,
   direction: "horizontal",
   loop: true,
-  autoplay: {
+  /* autoplay: {
     delay: 1500,
     disableOnInteraction: false,
-  },
+  }, */
   lazy: true,
-  slidesPerView: 1,
+  slidesPerView: 3,
   slidesOffsetAfter: 0,
-
-  // pagination
-  pagination: {
-    el: ".swiper-pagination",
+  //
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
+  // pagination
+  /* pagination: {
+    el: ".swiper-pagination",
+  }, */
 });
