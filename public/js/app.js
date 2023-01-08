@@ -49,34 +49,24 @@ const swiper_one = new Swiper(".swiper-one", {
   autoplay: true,
   slidesPerView: 1,
   slidesOffsetAfter: 0,
-
-  // navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+   
 });
 
 /* Slider:About us */
 var swiper_two = new Swiper(".swiper-two", {
   // parameters
-  speed: 2500,
-  direction: "horizontal",
-  loop: true,
-  /* autoplay: {
-    delay: 1500,
-    disableOnInteraction: false,
-  }, */
-  lazy: true,
-  slidesPerView: 3,
-  slidesOffsetAfter: 0,
-  //
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  // pagination
-  /* pagination: {
-    el: ".swiper-pagination",
-  }, */
+  direction: "horizontal",
+  lazy: true,
+  slidesOffsetAfter: 0,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  
 });
